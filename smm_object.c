@@ -48,6 +48,9 @@ void freeBoard(Node* head) {
     while (head) {
         tmp = head;
         head = head->next;
-        free
+        free(tmp);  // free 함수는 이렇게 호출해야 함
+    }
+}
+
 
 

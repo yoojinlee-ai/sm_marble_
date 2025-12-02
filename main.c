@@ -32,9 +32,13 @@ void inputPlayers() {
         exit(1);
     }
 
-    int i;
-    for (i=0; i<playerCount; i++) {
-        char pname[50];
-        printf;
-    }
+   int i;
+for (i=0; i<playerCount; i++) {
+    char pname[50];
+    printf("플레이어 %d 이름 입력: ", i+1);  
+    scanf("%s", pname);                       
+  
+}
+
+}
     
