@@ -21,7 +21,7 @@ Player* createPlayer(const char* name, int startEnergy) {
     if (!p) return NULL;
     strncpy(p->name, name, MAX_NAME_LEN-1);
     p->name[MAX_NAME_LEN-1] = '\0';
-    p->position = 0; // 집 노드 시작
+    p->position = 0; 
     p->energy = startEnergy;
     p->credit = 0;
     p->isExperimenting = 0;
@@ -38,7 +38,7 @@ void movePlayer(Player* player, int steps, Node* board) {
         if (current->next)
             current = current->next;
         else
-            current = board; // 원형 순환
+            current = board; 
     }
     player->position = current->id;
 }
@@ -48,7 +48,7 @@ void freeBoard(Node* head) {
     while (head) {
         tmp = head;
         head = head->next;
-        free(tmp);  // free 함수는 이렇게 호출해야 함
+        free(tmp);  
     }
 }
 
